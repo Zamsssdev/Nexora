@@ -15,6 +15,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "electron-updater": "^6.8.9",
     "webtorrent": "^3.0.16"
   },
   "devDependencies": {
@@ -43,6 +44,13 @@
     "appId": "com.nexora.app",
     "productName": "Nexora",
     "icon": "public/iconapps.png",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Zamsssdev",
+        "repo": "Nexora"
+      }
+    ],
     "files": [
       "electron.js",
       "package.json",
@@ -59,7 +67,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ]
     },

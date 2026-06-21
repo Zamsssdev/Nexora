@@ -19,6 +19,8 @@ const https = require('https');
 const http = require('http');
 const { execSync, spawn } = require('child_process');
 const net = require('net');
+const { autoUpdater } = require('electron-updater');
+
 
 let mainWindow;
 let viteProcess = null;
@@ -284,6 +286,10 @@ if (!gotTheLock) {
     }
 
     createWindow();
+    
+    if (app.isPackaged) {
+      autoUpdater.checkForUpdatesAndNotify();
+    }
     
     // Check if opened via protocol URL on startup
     const protocolUrl = process.argv.find(arg => arg.startsWith('toolsteam://'));
