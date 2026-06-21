@@ -1,7 +1,7 @@
 // Serverless endpoint to send Discord notifications using a Bot token stored in environment
 // Expects POST JSON: { gameTitle, appid, action, details, channelId? }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -57,4 +57,4 @@ export default async function handler(req, res) {
     console.error('[/api/notify] error:', err);
     return res.status(500).json({ error: err.message });
   }
-}
+};

@@ -13,6 +13,35 @@ The React Compiler is enabled on this template. See [this documentation](https:/
 
 Note: This will impact Vite dev & build performances.
 
+## Vercel Deployment
+
+This project is configured for Vercel with `vercel.json` and a serverless API endpoint at `api/notify.js`.
+
+1. Add environment variables in Vercel Project Settings:
+   - `BOT_TOKEN`
+   - `DISCORD_NOTIFY_CHANNEL_ID`
+
+2. Deploy the project:
+
+```bash
+npx vercel --prod --yes
+```
+
+3. After deployment, test the notify endpoint:
+
+```bash
+curl -X POST https://nexora-livid-theta.vercel.app/api/notify \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gameTitle": "Contoh Game",
+    "appid": "123456",
+    "action": "Added",
+    "details": "Game telah ditambahkan ke library Nexora"
+  }'
+```
+
+If you need a custom channel override, include `channelId` in the request body.
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
