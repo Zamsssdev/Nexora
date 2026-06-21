@@ -1,0 +1,34 @@
+name: Notify Discord on Account.json change
+
+on:
+  push:
+    paths:
+      - 'src/data/Account.json'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send Discord notification
+        if: github.event_name == 'push'
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+        run: |
+          set -e
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          COMMITTER=$(git log -1 --pretty='%an')
+          GAME_FILE='src/data/Account.json'
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD || true)
+
+          PAYLOAD=$(jq -n --arg title "Nexora — Account list updated" \
+            --arg desc "Account list updated by $COMMITTER: $COMMIT_MSG" \
+            --arg gamefile "$GAME_FILE" '{content: "Open Nexora: toolsteam://", embeds:[{title:$title,description:$desc,color:16711765,fields:[{name:"File",value:$gamefile,inline:true},{name:"Changes",value:$CHANGED_FILES,inline:false}],footer:{text:"Nexora"}}]}')
+
+          curl -s -X POST "https://discord.com/api/v10/channels/${DISCORD_CHANNEL_ID}/messages" \
+            -H "Authorization: Bot ${BOT_TOKEN}" \
+            -H "Content-Type: application/json" \
+            -d "$PAYLOAD"
