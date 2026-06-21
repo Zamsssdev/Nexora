@@ -352,6 +352,16 @@ function App() {
             steamPath: steamPath
           });
           showToast(`Sukses memasang bypass ${game.title}: ${result.manifestsDownloaded} manifest & ${result.configsDownloaded} config terpasang!`, 'success');
+          try {
+            await ipcRenderer.invoke('discord-notify-game', {
+              gameTitle: game.title,
+              appid: game.appid,
+              action: 'Added',
+              details: `Manifest installed with ${result.manifestsDownloaded} manifest(s) and ${result.configsDownloaded} config file(s).`
+            });
+          } catch (notifyErr) {
+            console.error('Discord notification failed:', notifyErr);
+          }
         } else {
           if (steamDir) {
             const hasWritePermission = await verifyPermission(steamDir, true);

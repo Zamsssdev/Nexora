@@ -14,6 +14,7 @@ try {
   process.exit(1);
 }
 const path = require('path');
+require('dotenv').config();
 const fs = require('fs');
 const https = require('https');
 const http = require('http');
@@ -330,6 +331,97 @@ ipcMain.on('open-external', (event, url) => {
 // IPC Handler to get automatically detected Steam path
 ipcMain.handle('get-steam-path', () => {
   return getSteamPath();
+});
+
+const DISCORD_NOTIFY_CHANNEL_ID = process.env.DISCORD_NOTIFY_CHANNEL_ID || '1518240948369489971';
+const DISCORD_ICON_URL = 'https://raw.githubusercontent.com/Zamsssdev/Nexora/main/public/iconapps.png';
+
+function sendDiscordChannelMessage(channelId, payload) {
+  return new Promise((resolve, reject) => {
+    const botToken = process.env.BOT_TOKEN;
+    if (!botToken) {
+      return reject(new Error('Discord bot token is not configured in BOT_TOKEN.'));
+    }
+
+    const data = JSON.stringify(payload);
+    const requestOptions = {
+      hostname: 'discord.com',
+      port: 443,
+      path: `/api/v10/channels/${channelId}/messages`,
+      method: 'POST',
+      headers: {
+        Authorization: `Bot ${botToken}`,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(data),
+        'User-Agent': 'Nexora/1.0 (Discord bot notifier)'
+      }
+    };
+
+    const req = https.request(requestOptions, (res) => {
+      let body = '';
+      res.on('data', (chunk) => { body += chunk; });
+      res.on('end', () => {
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          try {
+            resolve(body ? JSON.parse(body) : {});
+          } catch (parseError) {
+            resolve({});
+          }
+        } else {
+          reject(new Error(`Discord API returned ${res.statusCode}: ${body}`));
+        }
+      });
+    });
+
+    req.on('error', reject);
+    req.write(data);
+    req.end();
+  });
+}
+
+async function sendDiscordGameNotification({ channelId = DISCORD_NOTIFY_CHANNEL_ID, gameTitle, appid, action = 'Installed', details = '' } = {}) {
+  if (!gameTitle) {
+    throw new Error('gameTitle is required for Discord notification');
+  }
+
+  const payload = {
+    content: `Open Nexora: toolsteam://`,
+    embeds: [
+      {
+        title: `Nexora Notification`,
+        description: `**${gameTitle}** (${appid}) telah *${action}* di Nexora.`,
+        color: 0xff0055,
+        thumbnail: {
+          url: DISCORD_ICON_URL
+        },
+        fields: [
+          { name: 'Game', value: gameTitle, inline: true },
+          { name: 'AppID', value: String(appid), inline: true },
+          { name: 'Action', value: action, inline: true },
+          { name: 'Open Nexora', value: 'toolsteam://', inline: false }
+        ],
+        footer: {
+          text: 'Nexora',
+          icon_url: DISCORD_ICON_URL
+        }
+      }
+    ]
+  };
+
+  if (details) {
+    payload.embeds[0].fields.push({ name: 'Details', value: details, inline: false });
+  }
+
+  return sendDiscordChannelMessage(channelId, payload);
+}
+
+ipcMain.handle('discord-notify-game', async (event, payload = {}) => {
+  try {
+    return await sendDiscordGameNotification(payload);
+  } catch (err) {
+    console.error('[Discord Notify]', err.message);
+    throw err;
+  }
 });
 
 // Fetch SteamSpy top100 in 2 weeks from main process to avoid renderer CORS
