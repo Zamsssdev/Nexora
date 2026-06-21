@@ -12,7 +12,8 @@
     "dist": "npm run build && electron-builder",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch-titles": "node scripts/fetch-titles.js"
   },
   "dependencies": {
     "electron-updater": "^6.8.9",
@@ -43,7 +44,7 @@
   "build": {
     "appId": "com.nexora.app",
     "productName": "Nexora",
-    "icon": "public/iconapps.png",
+    "icon": "public/iconapps.ico",
     "publish": [
       {
         "provider": "github",
@@ -66,7 +67,7 @@
     "win": {
       "target": [
         {
-          "target": "nsis",
+          "target": "portable",
           "arch": [
             "x64"
           ]

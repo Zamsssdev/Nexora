@@ -35,7 +35,7 @@ export default function Sidebar({ activeTab, setActiveTab, libraryCount, steamDi
     <div className="sidebar">
       {/* Brand Header */}
       <div className="sidebar-brand">
-        <img src="/iconapps.png" alt="Nexora Logo" className="sidebar-logo" />
+        <img src="./iconapps.png" alt="Nexora Logo" className="sidebar-logo" />
         <div className="sidebar-brand-text">
           <span className="brand-name">Nexora</span>
           <span className="brand-sub">GAME LAUNCHER</span>

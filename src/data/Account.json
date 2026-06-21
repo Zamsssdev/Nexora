@@ -275,6 +275,10 @@
         "Account": {
             "username": "tbellcross",
             "password": "marpanov_steam"
+        },
+        "Account2": {
+            "username": "swmcs",
+            "password": "Sw603354"
         }
     },
     {
@@ -326,14 +330,6 @@
         }
     },
     {
-        "AppID": 2807960,
-        "Bypass": "false",
-        "Account": {
-            "username": "swmcs",
-            "password": "Sw603354"
-        }
-    },
-    {
         "AppID": 346110,
         "Bypass": "false",
         "Account": {
@@ -343,12 +339,8 @@
         "Account2": {
             "username": "swmcs",
             "password": "Sw603354"
-        }
-    },
-    {
-        "AppID": 346110,
-        "Bypass": "false",
-        "Account": {
+        },
+        "Account3": {
             "username": "ol3ts7kf9hc3",
             "password": "marpanov"
         }
@@ -359,6 +351,10 @@
         "Account": {
             "username": "SekkWukong",
             "password": "w5KQCV9Dsge2"
+        },
+        "Account2": {
+            "username": "jennym33",
+            "password": "58https://t.me/SHAREDSTEAM"
         }
     }
 ]

@@ -719,10 +719,10 @@ ipcMain.handle('login-steam', async (event, { username, password, steamPath }) =
     }
 
     // Use Steam's native -login argument for reliable auto-login
-    // Steam accepts: steam.exe -login <username> <password>
+    // Steam accepts: steam.exe -login <username> <password> -rememberpassword
     // This bypasses the login screen entirely if no 2FA/Guard is required
     const { spawn } = require('child_process');
-    const child = spawn(steamExe, ['-login', username, password, '-noreactlogin'], {
+    const child = spawn(steamExe, ['-login', username, password, '-rememberpassword', '-noreactlogin'], {
       detached: true,
       stdio: 'ignore'
     });

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Header.css';
 import emptypfp from '../assets/emptypfp.webp';
 
-export default function Header({ user, onLogout }) {
+export default function Header({ user, onLogout, onSearch }) {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -39,7 +39,10 @@ export default function Header({ user, onLogout }) {
               className="search-input"
               placeholder="Search"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                if (onSearch) onSearch(e.target.value);
+              }}
             />
             <span className="search-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

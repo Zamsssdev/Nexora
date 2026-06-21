@@ -19,6 +19,7 @@ function App() {
   const [toast, setToast] = useState({ show: false, message: '', type: '' });
   const [steamDir, setSteamDir] = useState(null);
   const [steamPath, setSteamPath] = useState(localStorage.getItem('steam_path') || '');
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Auth & Discord Gate States
   const [user, setUser] = useState(null);
@@ -177,9 +178,17 @@ function App() {
   };
   // Load directory handle and listen to auth state
   useEffect(() => {
+    // Safety timeout: if Supabase doesn't respond in 5s (e.g. empty credentials), unblock the UI
+    const authTimeout = setTimeout(() => {
+      console.warn('[Nexora] Auth check timed out — check your .env Supabase credentials!');
+      setCheckingAuth(false);
+    }, 5000);
+
     supabase.auth.getSession().then(({ data: { session } }) => {
+      clearTimeout(authTimeout);
       handleAuthChange(session);
     }).catch(err => {
+      clearTimeout(authTimeout);
       console.error(err);
       setCheckingAuth(false);
     });
@@ -501,7 +510,7 @@ function App() {
         <source src={wallpaperbg} type="video/mp4" />
       </video>
 
-      <Header user={user} onLogout={handleLogout} />
+      <Header user={user} onLogout={handleLogout} onSearch={setSearchQuery} />
 
       <Sidebar 
         activeTab={activeTab} 
@@ -520,7 +529,7 @@ function App() {
           <Home library={library} toggleLibrary={toggleLibrary} />
         )}
         {activeTab === 'bypass' && (
-          <Bypass steamPath={steamPath} showToast={showToast} />
+          <Bypass steamPath={steamPath} showToast={showToast} searchQuery={searchQuery} />
         )}
         {activeTab === 'library' && (
           <Library library={library} toggleLibrary={toggleLibrary} />
