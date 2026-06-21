@@ -1,0 +1,364 @@
+[
+    {
+        "AppID": 1174180,
+        "Bypass": [
+            {
+                "file": "RDR2.exe",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/RDR2Files/RDR2.exe"
+            },
+            {
+                "file": "1911.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/RDR2Files/1911.dll"
+            },
+            {
+                "file": "Launcher.exe",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/RDR2Files/Launcher.exe"
+            },
+            {
+                "file": "bink2w64.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/RDR2Files/bink2w64.dll"
+            }
+        ],
+        "Account": {
+            "username": "miro97790405",
+            "password": "marpanov_free20"
+        },
+        "Account2": {
+            "username": "saranredm",
+            "password": "marpanov_free11"
+        }
+    },
+    {
+        "AppID": 271590,
+        "Bypass": [
+            {
+                "file": "bink2w64.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/bink2w64.dll"
+            },
+            {
+                "file": "launch.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/launc.dll"
+            },
+            {
+                "file": "orig_socialclub.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/orig_socialclub.dll"
+            },
+            {
+                "file": "PlayGTAV.exe",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/PlayGTAV.exe"
+            },
+            {
+                "file": "socialclub.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/socialclub.dll"
+            }
+        ],
+        "Account": {
+            "username": "mosapoy10540",
+            "password": "marpanov_free21"
+        },
+        "Account2": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        },
+        "Account3": {
+            "username": "kostagjorcepetrov",
+            "password": "marpanov_free15"
+        },
+        "Account4": {
+            "username": "kjhss03584",
+            "password": "marpanov_free10"
+        },
+        "Account5": {
+            "username": "mf2lr4pd7ww4",
+            "password": "marpanov"
+        },
+        "Account6": {
+            "username": "raylix07",
+            "password": "Mali200265"
+        }
+    },
+    {
+        "AppID": 3595230,
+        "Bypass": "false",
+        "Account": {
+            "username": "uexq59805",
+            "password": "jjackson14"
+        }
+    },
+    {
+        "AppID": 1608450,
+        "Bypass": "false",
+        "Account": {
+            "username": "oopqv41945",
+            "password": "48arb4pv"
+        }
+    },
+    {
+        "AppID": 621060,
+        "Bypass": "false",
+        "Account": {
+            "username": "raylix07",
+            "password": "Mali200265"
+        }
+    },
+    {
+        "AppID": 244210,
+        "Bypass": "false",
+        "Account": {
+            "username": "raylix07",
+            "password": "Mali200265"
+        }
+    },
+    {
+        "AppID": 227300,
+        "Bypass": "false",
+        "Account": {
+            "username": "raylix07",
+            "password": "Mali200265"
+        }
+    },
+    {
+        "AppID": 3240220,
+        "Bypass": "false",
+        "Account": {
+            "username": "raylix07",
+            "password": "Mali200265"
+        }
+    },
+    {
+        "AppID": 292030,
+        "Bypass": "false",
+        "Account": {
+            "username": "asahiaki1",
+            "password": "marpanov_free19"
+        }
+    },
+    {
+        "AppID": 550,
+        "Bypass": "false",
+        "Account": {
+            "username": "asahiaki1",
+            "password": "marpanov_free19"
+        }
+    },
+    {
+        "AppID": 220,
+        "Bypass": "false",
+        "Account": {
+            "username": "asahiaki1",
+            "password": "marpanov_free19"
+        }
+    },
+    {
+        "AppID": 242760,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        },
+        "Account2": {
+            "username": "lmnzc77437",
+            "password": "fmlPfpP8GEIf4"
+        },
+        "Account3": {
+            "username": "raylix07",
+            "password": "Mali200265"
+        }
+    },
+    {
+        "AppID": 242050,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        }
+    },
+    {
+        "AppID": 286160,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        }
+    },
+    {
+        "AppID": 218620,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        }
+    },
+    {
+        "AppID": 1966720,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        }
+    },
+    {
+        "AppID": 4000,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        }
+    },
+    {
+        "AppID": 2592160,
+        "Bypass": "false",
+        "Account": {
+            "username": "goodbower",
+            "password": "marpanov_free18"
+        }
+    },
+    {
+        "AppID": 2399830,
+        "Bypass": "false",
+        "Account": {
+            "username": "qd1rb0cg3is9",
+            "password": "marpanov_free17"
+        }
+    },
+    {
+        "AppID": 1517290,
+        "Bypass": "false",
+        "Account": {
+            "username": "kostagjorcepetrov",
+            "password": "marpanov_free15"
+        }
+    },
+    {
+        "AppID": 1030300,
+        "Bypass": "false",
+        "Account": {
+            "username": "stupidcow1st",
+            "password": "marpanov_free12"
+        }
+    },
+    {
+        "AppID": 2890830,
+        "Bypass": "false",
+        "Account": {
+            "username": "malekaladi9846",
+            "password": "marpanov_free8"
+        }
+    },
+    {
+        "AppID": 1262560,
+        "Bypass": "false",
+        "Account": {
+            "username": "nando_vilanova",
+            "password": "marpanov_free5"
+        }
+    },
+    {
+        "AppID": 1222680,
+        "Bypass": "false",
+        "Account": {
+            "username": "lqoree",
+            "password": "marpanov_free1"
+        }
+    },
+    {
+        "AppID": 1091500,
+        "Bypass": "false",
+        "Account": {
+            "username": "tbellcross",
+            "password": "marpanov_steam"
+        }
+    },
+    {
+        "AppID": 2807960,
+        "Bypass": "false",
+        "Account": {
+            "username": "tbellcross",
+            "password": "marpanov_steam"
+        }
+    },
+    {
+        "AppID": 1846380,
+        "Bypass": "false",
+        "Account": {
+            "username": "kagqg46840",
+            "password": "igik8626"
+        }
+    },
+    {
+        "AppID": 371660,
+        "Bypass": "false",
+        "Account": {
+            "username": "seneshm",
+            "password": "marpanov1"
+        }
+    },
+    {
+        "AppID": 220240,
+        "Bypass": "false",
+        "Account": {
+            "username": "nathan546546",
+            "password": "marpanov1"
+        }
+    },
+    {
+        "AppID": 367520,
+        "Bypass": "false",
+        "Account": {
+            "username": "pazmiqueas12",
+            "password": "marpanov_free_steam"
+        }
+    },
+    {
+        "AppID": 3241660,
+        "Bypass": "false",
+        "Account": {
+            "username": "jxngwoo0210",
+            "password": "marpanov_free_akk"
+        }
+    },
+    {
+        "AppID": 977950,
+        "Bypass": "false",
+        "Account": {
+            "username": "jxngwoo0210",
+            "password": "marpanov_free_akk"
+        }
+    },
+    {
+        "AppID": 2807960,
+        "Bypass": "false",
+        "Account": {
+            "username": "swmcs",
+            "password": "Sw603354"
+        }
+    },
+    {
+        "AppID": 346110,
+        "Bypass": "false",
+        "Account": {
+            "username": "jxngwoo0210",
+            "password": "marpanov_free_akk"
+        },
+        "Account2": {
+            "username": "swmcs",
+            "password": "Sw603354"
+        }
+    },
+    {
+        "AppID": 346110,
+        "Bypass": "false",
+        "Account": {
+            "username": "ol3ts7kf9hc3",
+            "password": "marpanov"
+        }
+    },
+    {
+        "AppID": 2358720,
+        "Bypass": "false",
+        "Account": {
+            "username": "SekkWukong",
+            "password": "w5KQCV9Dsge2"
+        }
+    }
+]

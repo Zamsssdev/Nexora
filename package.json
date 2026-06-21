@@ -1,0 +1,74 @@
+{
+  "name": "nexora",
+  "private": true,
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "electron.js",
+  "scripts": {
+    "dev": "vite",
+    "dev:electron": "concurrently -k -n \"VITE,ELECTRON\" -c \"cyan,yellow\" \"vite\" \"wait-on http://localhost:5175 && electron .\"",
+    "electron": "electron .",
+    "start": "electron .",
+    "dist": "npm run build && electron-builder",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "webtorrent": "^3.0.16"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@boxicons/react": "^1.0.3",
+    "@eslint/js": "^10.0.1",
+    "@rolldown/plugin-babel": "^0.2.3",
+    "@supabase/supabase-js": "^2.108.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "concurrently": "^10.0.3",
+    "electron": "^42.4.1",
+    "electron-builder": "^26.15.3",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "vite": "^8.0.12",
+    "wait-on": "^9.0.10"
+  },
+  "build": {
+    "appId": "com.nexora.app",
+    "productName": "Nexora",
+    "icon": "public/iconapps.png",
+    "files": [
+      "electron.js",
+      "package.json",
+      "dist/**/*",
+      "node_modules/**/*",
+      "!node_modules/.cache/**/*",
+      "!node_modules/.bin/**/*"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "C:/Users/azzam/ToolSteam-dist-app"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "deleteAppDataOnUninstall": false
+    },
+    "npmRebuild": false
+  }
+}
