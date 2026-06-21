@@ -33,6 +33,27 @@ export default function Header({ user, onLogout, onSearch }) {
         </div>
 
         <div className="header-right-group">
+          <button
+            className="open-nexora-btn"
+            title="Buka Nexora"
+            onClick={() => {
+              try {
+                window.location.href = 'toolsteam://';
+              } catch (e) {
+                // fallback
+                window.open('toolsteam://');
+              }
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2v6"></path>
+              <path d="M12 22v-6"></path>
+              <path d="M4.93 4.93l4.24 4.24"></path>
+              <path d="M18.36 18.36l-4.24-4.24"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span className="open-text">Buka Nexora</span>
+          </button>
           <div className="search-wrapper">
             <input
               type="text"
