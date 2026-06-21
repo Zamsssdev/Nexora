@@ -351,10 +351,303 @@
         "Account": {
             "username": "SekkWukong",
             "password": "w5KQCV9Dsge2"
+        }
+    },
+    {
+        "AppID": 35140,
+        "Bypass": "false",
+        "Account": {
+            "username": "oring32",
+            "password": "FunpayOnibist123"
+        }
+    },
+    {
+        "AppID": 424860,
+        "Bypass": "false",
+        "Account": {
+            "username": "oring32",
+            "password": "FunpayOnibist123"
+        }
+    },
+    {
+        "AppID": 307690,
+        "Bypass": "false",
+        "Account": {
+            "username": "oring32",
+            "password": "FunpayOnibist123"
+        }
+    },
+    {
+        "AppID": 1250410,
+        "Bypass": "false",
+        "Account": {
+            "username": "tim3057",
+            "password": "Steamvalidate123123123123"
+        }
+    },
+    {
+        "AppID": 284160,
+        "Bypass": "false",
+        "Account": {
+            "username": "tim3057",
+            "password": "Steamvalidate123123123123"
+        }
+    },
+    {
+        "AppID": 4000,
+        "Bypass": "false",
+        "Account": {
+            "username": "tim3057",
+            "password": "Steamvalidate123123123123"
+        }
+    },
+    {
+        "AppID": 271590,
+        "Bypass": [
+            {
+                "file": "bink2w64.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/bink2w64.dll"
+            },
+            {
+                "file": "launch.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/launc.dll"
+            },
+            {
+                "file": "orig_socialclub.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/orig_socialclub.dll"
+            },
+            {
+                "file": "PlayGTAV.exe",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/PlayGTAV.exe"
+            },
+            {
+                "file": "socialclub.dll",
+                "url": "https://github.com/uxqc/L4unch3rH0sting/releases/download/GTAVFix/socialclub.dll"
+            }
+        ],
+        "Account7": {
+            "username": "tim3057",
+            "password": "Steamvalidate123123123123"
+        }
+    },
+    {
+        "AppID": 1174180,
+        "Bypass": "false",
+        "Account": {
+            "username": "dokq84380",
+            "password": "Elden78998877"
         },
         "Account2": {
-            "username": "jennym33",
-            "password": "58https://t.me/SHAREDSTEAM"
+            "username": "erwuo673",
+            "password": "n3ww321e15"
+        }
+    },
+    {
+        "AppID": 1391110,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 883710,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 21690,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 221040,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 287350,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 304240,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 264710,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 292030,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 812140,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 1674600,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 346110,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 1172040,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 489830,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 645630,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 584720,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 848450,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 477160,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 276190,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 1038840,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 1262560,
+        "Bypass": "false",
+        "Account": {
+            "username": "tuke151",
+            "password": "2008108tt"
+        }
+    },
+    {
+        "AppID": 1465360,
+        "Bypass": "false",
+        "Account": {
+            "username": "lsoiy210",
+            "password": "lwl67033R"
+        }
+    },
+    {
+        "AppID": 550,
+        "Bypass": "false",
+        "Account": {
+            "username": "lsoiy210",
+            "password": "lwl67033R"
+        }
+    },
+    {
+        "AppID": 252490,
+        "Bypass": "false",
+        "Account": {
+            "username": "lsoiy210",
+            "password": "lwl67033R"
+        }
+    },
+    {
+        "AppID": 526870,
+        "Bypass": "false",
+        "Account": {
+            "username": "lsoiy210",
+            "password": "lwl67033R"
+        }
+    },
+    {
+        "AppID": 12210,
+        "Bypass": "false",
+        "Account": {
+            "username": "dottie1122",
+            "password": "Dott1568"
+        }
+    },
+    {
+        "AppID": 255710,
+        "Bypass": "false",
+        "Account": {
+            "username": "thb112181",
+            "password": "steamok123123"
         }
     }
 ]
